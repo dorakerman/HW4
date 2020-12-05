@@ -21,3 +21,9 @@ do
 		echo "${line}, Netanyahu, ${bibi_num}, Gantz, ${gantz_num}">>results.csv
 	fi
 done<list_of_pages.txt
+
+#Now we remove the files that were created by the program, so they dont appear
+# in the folder at the end. This is optional.
+rm temp_content.txt
+rm 3082
+rm list_of_pages.txt
