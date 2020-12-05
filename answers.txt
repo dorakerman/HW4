@@ -1,0 +1,12 @@
+Question 1:
+We believe that manually it would have taken us around 1 hour  to do so, using google chrome.
+If we had to count manually, it would've taken us 4 hours.
+
+Question 2:
+We have come to a conclusion that writing this sort of program can save us time, blood, sweat and tears.
+We can use the concept on every search and count task the resolves many files or a lot of text.
+
+Question 3:
+If we would like to run this script every hour, we can create a different script that knows how to count time,
+and every hour it runs the script.
+Also, we should create a list of all the links we have searched and after creating the new list of files we should delete the links that appear in both files.  
