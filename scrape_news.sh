@@ -4,8 +4,12 @@ echo "Starting..."
 wget https://www.ynetnews.com/category/3082
 #Use grep and sort to get all the links and sort them to appear only once.
 #Store links in a different file.
-grep -o -E '(https://www.ynetnews.com/article/)([a-z]|[0-9]|[A-Z]){9}(")+' 3082\
-	| sort -u | sed 's/"//'> list_of_pages.txt
+grep -o -E '(https://www.ynetnews.com/article/)([a-z]|[0-9]|[A-Z]){9}("|#)+'\
+ 3082 | sort -u | sed 's/"//' | sed 's/#//' > list_of_pages.txt
+
+#grep -o -E '(https://www.ynetnews.com/article/)([a-z]|[0-9]|[A-Z])+("|#)+' 3082\
+#	| sort -u | sed 's/"//' |sed 's/#//'> list_of_pages.txt
+
 #Count and store number of lines in result file.
 wc -l list_of_pages.txt | sed 's/list_of_pages.txt//' > results.csv
 #Each line is a link, the loop goes over all of them. 
